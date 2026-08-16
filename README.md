@@ -1,6 +1,12 @@
-# FLMNN
+# FLMNN Python Library
 
-**Functional Large Margin Nearest Neighbor (FLMNN)** is a Python implementation for classification of multidimensional functional data. 
+**Functional Large Margin Nearest Neighbor (FLMNN)** is a method for classification of multidimensional functional data. 
+
+- Authors: **Shanghong Xie<sup>a,b</sup> (sx2@mailbox.sc.edu), and R. Todd Ogden<sup>b</sup>**
+
+- Affiliations:
+   + 1. **Department of Statistics, University of South Carolina, Columbia, SC, USA**
+   + 2. **Department of Biostatistics, Mailman School of Public Health, Columbia University, New York, NY, USA**
 
 The main user-facing interface follows a scikit-learn-style workflow:
 
@@ -433,13 +439,8 @@ Here `k=0` selects the first eigenfunction and `third_idx=10` fixes the third fu
 Because the eigenfunctions are known in simulation, their recovery can be evaluated quantitatively.
 
 A useful similarity measure is the absolute normalized inner product:
-
-$$ \operatorname{Similarity}(\psi_k,\hat{\psi}_k)=
-\frac{
-    |\langle \psi_k,\hat{\psi}_k\rangle|
-}{
-    \|\psi_k\|\,\|\hat{\psi}_k\|
-}.$$
+$\frac{|\langle \psi_k, \hat{\psi}_k \rangle|}
+{\|\psi_k\|\|\hat{\psi}_k\|}$,
 
 Values close to 1 indicate strong agreement. The absolute value accounts for the fact that an eigenfunction and its negative represent the same eigenfunction.
 

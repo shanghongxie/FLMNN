@@ -41,7 +41,26 @@ sim_example.py
 
 ## Installation
 
-Create a dedicated Python environment for FLMNN. The implementation has been developed with the following main packages:
+FLMNN requires Python 3.10–3.12. We recommend using a dedicated Python
+environment to avoid dependency conflicts.
+
+### Install from GitHub
+
+Create and activate a Conda environment:
+
+```bash
+conda create -n flmnn python=3.12
+conda activate flmnn
+```
+
+Then install FLMNN directly from GitHub:
+
+```bash
+python -m pip install git+https://github.com/shanghongxie/FLMNN.git
+```
+
+The required dependencies are specified in `pyproject.toml` and will be
+installed automatically. The main dependencies include:
 
 - NumPy
 - SciPy
@@ -51,17 +70,29 @@ Create a dedicated Python environment for FLMNN. The implementation has been dev
 - metric-learn
 - matplotlib
 
-For the current implementation, use **scikit-fda 0.10.1**.
-
-A typical environment setup is:
+After installation, verify that FLMNN can be imported:
 
 ```bash
-conda create -n flmnn python=3.12
-conda activate flmnn
-python -m pip install numpy scipy pandas scikit-fda==0.10.1 tensorly scikit-learn metric-learn matplotlib
+python -c "from flmnn import FLMNN; print('FLMNN installed successfully')"
 ```
 
-`metric-learn` and `scikit-learn` should be installed at mutually compatible versions. If `metric-learn` raises an error involving `force_all_finite`, use a scikit-learn version that still supports that argument.
+FLMNN can then be imported in Python using:
+
+```python
+from flmnn import FLMNN
+```
+
+### Dependency compatibility
+
+The current implementation uses `scikit-fda 0.10.1`. Compatible dependency
+versions are specified in `pyproject.toml`.
+
+If you encounter installation or dependency issues, first check the
+installed environment with:
+
+```bash
+python -m pip check
+```
 
 ## Data format
 

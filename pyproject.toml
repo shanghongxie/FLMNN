@@ -63,4 +63,4 @@ dev = [
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["flmnn*"]
-exclude = ["examples*", "simulation*", "tests*"]
+exclude = ["examples*", "simulation*"]

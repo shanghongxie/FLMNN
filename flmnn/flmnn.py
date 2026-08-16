@@ -7,29 +7,14 @@ Created on Sat Aug 15 09:51:12 2026
 @author: shanghongxie
 """
 
-
-
-import sys
-
 import numpy as np
 import tensorly as tl
 
-from pathlib import Path
-import importlib
+from . import tensor_decomposition
+from .tensor_decomposition import MARGARITA, fCP_TPA
+from .marginal_product_basis import MPB
+from .utility import FPCA
 
-CODE_DIR = str(Path(__file__).resolve().parent)
-
-if CODE_DIR not in sys.path:
-    sys.path.insert(0, CODE_DIR)
-
-importlib.invalidate_caches()
-
-import tensor_decomposition
-from tensor_decomposition import MARGARITA, fCP_TPA
-
-from marginal_product_basis import MPB
-from utility import discrete_laplacian_1D
-from utility import FPCA
 from skfda.preprocessing.smoothing import BasisSmoother
 from skfda.representation.basis import BSpline, Tensor
 

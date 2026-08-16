@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "flmnn"
+version = "0.1.0"
+
+description = "Functional Large Margin Nearest Neighbor for multidimensional functional data classification"
+
+readme = "README.md"
+
+requires-python = ">=3.10,<3.13"
+
+license = "BSD-3-Clause"
+
+authors = [
+    { name = "Shanghong Xie", email = "sx2@mailbox.sc.edu"},
+    { name = "R. Todd Ogden"}
+]
+
+keywords = [
+    "functional data analysis",
+    "multidimensional functional data",
+    "FPCA",
+    "metric learning",
+    "LMNN",
+    "classification"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "numpy>=1.26,<2.0",
+    "scipy",
+    "tensorly",
+    "scikit-fda==0.10.1",
+    "scikit-learn>=1.6,<1.8",
+    "metric-learn==0.7.0",
+    "matplotlib"
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "build",
+    "twine"
+]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flmnn*"]
+exclude = ["examples*", "simulation*", "tests*"]

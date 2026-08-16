@@ -19,7 +19,7 @@ data = generate_dense_data(
     Ns=(4, 4, 16),   # Number of observation grid points in each
                         # functional dimension.
                         # Each functional observation is evaluated on
-                        # a 10 x 10 x 16 grid.
+                        # a 4 x 4 x 16 grid.
 
     Ms=(4, 4, 4),      # Number of marginal B-spline basis functions
                         # used in each of the three dimensions.

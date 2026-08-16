@@ -8,7 +8,7 @@ Created on Sun Aug 16 13:12:46 2026
 
 # Import the simulation-data module and its main generator function.
 
-from genSimData_flmnn import generate_dense_data
+from genData import generate_dense_data
 
 
 # Import the FLMNN module and the user-facing FLMNN estimator class.

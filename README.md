@@ -124,7 +124,6 @@ The following is the basic dense data example used by `example.py`.
 ```python
 from genData import generate_dense_data
 
-
 data = generate_dense_data(
     Ns=(4, 4, 16),
     Ms=(4, 4, 4),

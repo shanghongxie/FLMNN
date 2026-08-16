@@ -8,7 +8,7 @@
    + 1. **Department of Statistics, University of South Carolina, Columbia, SC, USA**
    + 2. **Department of Biostatistics, Mailman School of Public Health, Columbia University, New York, NY, USA**
 
-The main user-facing interface follows a scikit-learn-style workflow:
+The main interface follows a scikit-learn-style workflow:
 
 ```python
 from flmnn import FLMNN
